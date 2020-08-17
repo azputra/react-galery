@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-function ModalBlue(props) {
+function ModalGreen(props) {
     const style = {
         animation:
             "1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s 1 normal forwards running fade-in-up",
@@ -15,7 +15,7 @@ function ModalBlue(props) {
         >
             <div className="modal-body-red">
                 <button
-                    onClick={props.handleCloseModalBlue}
+                    onClick={props.handleCloseModalGreen}
                     type="button"
                     className="close close-x-white"
                     style={{ zIndex: "99" }}
@@ -51,4 +51,4 @@ function ModalBlue(props) {
     )
 }
 
-export default ModalBlue
+export default ModalGreen

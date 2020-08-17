@@ -9,6 +9,11 @@ import Background from "./Background";
 // 2
 import ModalRed from "../components/ModalRed"
 import ModalBlue from "../components/ModalBlue"
+import ModalBrown from "../components/ModalBrown"
+import ModalOrange from "../components/ModalOrange"
+import ModalUtama from "../components/ModalUtama"
+import ModalYellow from "../components/ModalYellow"
+import ModalGreen from "../components/ModalGreen"
 
 
 function Home(props) {
@@ -44,34 +49,22 @@ function Home(props) {
     const handleShowModal2 = () => setshowModal2(true);
 
     // tambahin variabel buat setstate
-    const handleCloseModalRed = () => {
-        setModalRed(false);
-    };
+    const handleCloseModalRed = () => setModalRed(false);
     const handleShowModalRed = () => setModalRed(true);
 
-    const handleCloseModalOrange = () => {
-        setModalOrange(false);
-    };
+    const handleCloseModalOrange = () => setModalOrange(false);
     const handleShowModalOrange = () => setModalOrange(true);
 
-    const handleCloseModalBrown = () => {
-        setModalBrown(false);
-    };
+    const handleCloseModalBrown = () => setModalBrown(false);
     const handleShowModalBrown = () => setModalBrown(true);
 
-    const handleCloseModalYellow = () => {
-        setModalYellow(false);
-    };
+    const handleCloseModalYellow = () => setModalYellow(false);
     const handleShowModalYellow = () => setModalYellow(true);
 
-    const handleCloseModalGreen = () => {
-        setModalGreen(false);
-    };
+    const handleCloseModalGreen = () => setModalGreen(false);
     const handleShowModalGreen = () => setModalGreen(true);
 
-    const handleCloseModalBlue = () => {
-        setModalBlue(false);
-    };
+    const handleCloseModalBlue = () => setModalBlue(false);
     const handleShowModalBlue = () => setModalBlue(true);
 
     useEffect(() => { }, []);
@@ -80,8 +73,8 @@ function Home(props) {
 
     return (
         <div>
-            <section class="pen">
-                <div class="panel top">
+            <section className="pen">
+                <div className="panel top">
                     <h1
                         style={{
                             paddingTop: "40vh",
@@ -106,7 +99,7 @@ function Home(props) {
                     </h4>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <div onClick={handleShow} id="btn">
-                            <span class="noselect">Klik</span>
+                            <span className="noselect">Klik</span>
                             <div id="circle"></div>
                         </div>
                     </div>
@@ -115,76 +108,15 @@ function Home(props) {
 
             {/* Option */}
             {show !== false ? (
-                <div
-                    className="modal-container"
-                    style={show ? style : styleOut}
-                >
-                    <div className="modal-body">
-                        <button
-                            onClick={handleClose}
-                            type="button"
-                            className="close close-x"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div className="row mt-15">
-                            <div className="col grid-center cropped">
-                                <img className="square" src={modal} />
-                                <h2
-                                    style={{ fontFamily: "anton", }}
-                                    className="text-white mt-4 m-0"
-                                >
-                                    VIRTUAL PHOTOSHOOT
-                                </h2>
-                                <p className="text-white">
-                                    lorem ipsum this is a gallery of photo.
-                                </p>
-                                <div className="flex-center">
-                                    {/* ketiga yang mau di klik kasih onClick handleShowModalRed*/}
-                                    <div
-                                        className="kotak-kecil bg-red m-0_5 cursor-pointer"
-                                        onClick={handleShowModalRed}
-                                    />
-                                    <div
-                                        className="kotak-kecil bg-orange m-0_5 cursor-pointer"
-                                        onClick={handleShowModalOrange}
-                                    />
-                                    <div
-                                        className="kotak-kecil bg-bror m-0_5 cursor-pointer"
-                                        onClick={handleShowModalBrown}
-                                    />
-                                    <div
-                                        className="kotak-kecil bg-color m-0_5 cursor-pointer"
-                                        onClick={handleShowModalYellow}
-                                    />
-                                    <div
-                                        className="kotak-kecil bg-color m-0_5 cursor-pointer"
-                                        onClick={handleShowModalGreen}
-                                    />
-                                    <div
-                                        className="kotak-kecil bg-color m-0_5 cursor-pointer"
-                                        onClick={handleShowModalBlue}
-                                    />
-                                </div>
-                            </div>
-                            <div className="col grid-center cropped">
-                                <img className="square" src={modal} />
-                                <h2 className="mt-4 m-0 text-white" style={{ fontFamily: "anton", }} >LIVE PAINTING</h2>
-                                <p className="text-white">
-                                    lorem ipsum this is a gallery of painting.
-                    </p>
-                                <div className="flex-center">
-                                    <div className="kotak-kecil bg-color m-0_5" />
-                                    <div className="kotak-kecil bg-color m-0_5" />
-                                    <div className="kotak-kecil bg-color m-0_5" />
-                                    <div className="kotak-kecil bg-color m-0_5" />
-                                    <div className="kotak-kecil bg-color m-0_5" />
-                                    <div className="kotak-kecil bg-color m-0_5" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ModalUtama
+                    handleClose={handleClose}
+                    handleShowModalRed={handleShowModalRed}
+                    handleShowModalOrange={handleShowModalOrange}
+                    handleShowModalBrown={handleShowModalBrown}
+                    handleShowModalYellow={handleShowModalYellow}
+                    handleShowModalGreen={handleShowModalGreen}
+                    handleShowModalBlue={handleShowModalBlue}
+                />
             ) : (
                     <div></div>
                 )}
@@ -212,7 +144,7 @@ function Home(props) {
                     </h2>
                                 <p>lorem ipsum this is a gallery of photo.</p>
                                 <div className="flex-center">
-                                    <div class="brk-btn">Kiri</div>
+                                    <div className="brk-btn">Kiri</div>
                                 </div>
                             </div>
                             <div className="col grid-center cropped">
@@ -220,7 +152,7 @@ function Home(props) {
                                 <h2 className="mt-4 m-0">LIVE PAINTING</h2>
                                 <p>lorem ipsum this is a gallery of painting.</p>
                                 <div className="flex-center">
-                                    <div class="brk-btn">Kanan</div>
+                                    <div className="brk-btn">Kanan</div>
                                 </div>
                             </div>
                         </div>
@@ -245,40 +177,7 @@ function Home(props) {
             {/* Painting Orange */}
             {
                 modalOrange !== false ? (
-                    <div
-                        className="modal-container"
-                        style={modalOrange ? style : styleOut}
-                    >
-                        <div className="modal-bodyOrange">
-                            <button
-                                onClick={handleCloseModalOrange}
-                                type="button"
-                                className="close close-x"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            {
-                                <div className="wrapper">
-                                    <div className="right-content">1</div>
-                                    <div className="left-content-1">
-                                        <h3>judul</h3>
-                                        <div className="left-content">
-                                            <div className="content-item" id="item1">
-                                                img
-                    </div>
-                                            <div className="content-item" id="item2">
-                                                img
-                    </div>
-                                            <div className="content-item" id="item3">
-                                                img
-                    </div>
-                                        </div>
-                                        <h3>scroll</h3>
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    </div>
+                    <ModalOrange handleCloseModalOrange={handleCloseModalOrange} />
                 ) : (
                         <div></div>
                     )
@@ -287,64 +186,7 @@ function Home(props) {
             {/* Painting Brown */}
             {
                 modalBrown !== false ? (
-                    <div
-                        className="modal-container"
-                        style={modalBrown ? style : styleOut}
-                    >
-                        <div className="modal-body">
-                            <button
-                                onClick={handleCloseModalBrown}
-                                type="button"
-                                className="close close-x"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div className="row mt-15">
-                                <div className="col grid-center cropped">
-                                    <img className="square" src={modal} />
-                                    <h2
-                                        onClick={handleShowModal2}
-                                        className="App-link mt-4 m-0 cursor-pointer"
-                                    >
-                                        Virtual Photoshoot
-                </h2>
-                                    <p className="text-white">
-                                        lorem ipsum this is a gallery of photo.
-                </p>
-                                    <div className="flex-center">
-                                        {/* ketiga yang mau di klik kasih onClick handleShowModalRed*/}
-                                        <div
-                                            className="kotak-kecil bg-red m-0_5 cursor-pointer"
-                                            onClick={handleShowModalRed}
-                                        />
-                                        <div
-                                            className="kotak-kecil bg-orange m-0_5 cursor-pointer"
-                                            onClick={handleShowModalOrange}
-                                        />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                    </div>
-                                </div>
-                                <div className="col grid-center cropped">
-                                    <img className="square" src={modal} />
-                                    <h2 className="mt-4 m-0 text-white">LIVE PAINTING</h2>
-                                    <p className="text-white">
-                                        lorem ipsum this is a gallery of painting.
-                </p>
-                                    <div className="flex-center">
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ModalBrown handleCloseModalBrown={handleCloseModalBrown} />
                 ) : (
                         <div></div>
                     )
@@ -353,64 +195,7 @@ function Home(props) {
             {/* Painting Yellow */}
             {
                 modalYellow !== false ? (
-                    <div
-                        className="modal-container"
-                        style={modalYellow ? style : styleOut}
-                    >
-                        <div className="modal-body">
-                            <button
-                                onClick={handleCloseModalYellow}
-                                type="button"
-                                className="close close-x"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div className="row mt-15">
-                                <div className="col grid-center cropped">
-                                    <img className="square" src={modal} />
-                                    <h2
-                                        onClick={handleShowModal2}
-                                        className="App-link mt-4 m-0 cursor-pointer"
-                                    >
-                                        Virtual Photoshoot
-                </h2>
-                                    <p className="text-white">
-                                        lorem ipsum this is a gallery of photo.
-                </p>
-                                    <div className="flex-center">
-                                        {/* ketiga yang mau di klik kasih onClick handleShowModalRed*/}
-                                        <div
-                                            className="kotak-kecil bg-red m-0_5 cursor-pointer"
-                                            onClick={handleShowModalRed}
-                                        />
-                                        <div
-                                            className="kotak-kecil bg-orange m-0_5 cursor-pointer"
-                                            onClick={handleShowModalOrange}
-                                        />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                    </div>
-                                </div>
-                                <div className="col grid-center cropped">
-                                    <img className="square" src={modal} />
-                                    <h2 className="mt-4 m-0 text-white">LIVE PAINTING</h2>
-                                    <p className="text-white">
-                                        lorem ipsum this is a gallery of painting.
-                </p>
-                                    <div className="flex-center">
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ModalYellow handleCloseModalYellow={handleCloseModalYellow} />
                 ) : (
                         <div></div>
                     )
@@ -419,64 +204,7 @@ function Home(props) {
             {/* Painting Green */}
             {
                 modalGreen !== false ? (
-                    <div
-                        className="modal-container"
-                        style={modalGreen ? style : styleOut}
-                    >
-                        <div className="modal-body">
-                            <button
-                                onClick={handleCloseModalGreen}
-                                type="button"
-                                className="close close-x"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div className="row mt-15">
-                                <div className="col grid-center cropped">
-                                    <img className="square" src={modal} />
-                                    <h2
-                                        onClick={handleShowModal2}
-                                        className="App-link mt-4 m-0 cursor-pointer"
-                                    >
-                                        Virtual Photoshoot
-                </h2>
-                                    <p className="text-white">
-                                        lorem ipsum this is a gallery of photo.
-                </p>
-                                    <div className="flex-center">
-                                        {/* ketiga yang mau di klik kasih onClick handleShowModalRed*/}
-                                        <div
-                                            className="kotak-kecil bg-red m-0_5 cursor-pointer"
-                                            onClick={handleShowModalRed}
-                                        />
-                                        <div
-                                            className="kotak-kecil bg-orange m-0_5 cursor-pointer"
-                                            onClick={handleShowModalOrange}
-                                        />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                    </div>
-                                </div>
-                                <div className="col grid-center cropped">
-                                    <img className="square" src={modal} />
-                                    <h2 className="mt-4 m-0 text-white">LIVE PAINTING</h2>
-                                    <p className="text-white">
-                                        lorem ipsum this is a gallery of painting.
-                </p>
-                                    <div className="flex-center">
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                        <div className="kotak-kecil bg-color m-0_5" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ModalGreen handleCloseModalGreen={handleCloseModalGreen} />
                 ) : (
                         <div></div>
                     )
