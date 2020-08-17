@@ -192,18 +192,20 @@ function Home(props) {
             {ShowYellow !== false ? (
                 <ModalUtamaYellow
                     handleCloseYellow={handleCloseYellow}
-                    handleShowModalRed={handleShowModalRed}
-                    handleShowModalOrange={handleShowModalOrange}
-                    handleShowModalBrown={handleShowModalBrown}
+
+                    // handleShowModalRed={handleShowModalRed}
+                    // handleShowModalOrange={handleShowModalOrange}
+                    // handleShowModalBrown={handleShowModalBrown}
                     handleShowModalYellow={handleShowModalYellow}
-                    handleShowModalGreen={handleShowModalGreen}
-                    handleShowModalBlue={handleShowModalBlue}
-                    handleShowModalMerah={handleShowModalMerah}
-                    handleShowModalJingga={handleShowModalJingga}
-                    handleShowModalCoklat={handleShowModalCoklat}
+                    // handleShowModalGreen={handleShowModalGreen}
+                    // handleShowModalBlue={handleShowModalBlue}
+
+                    // handleShowModalMerah={handleShowModalMerah}
+                    // handleShowModalJingga={handleShowModalJingga}
+                    // handleShowModalCoklat={handleShowModalCoklat}
                     handleShowModalKuning={handleShowModalKuning}
-                    handleShowModalHijau={handleShowModalHijau}
-                    handleShowModalBiru={handleShowModalBiru}
+                // handleShowModalHijau={handleShowModalHijau}
+                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -213,12 +215,20 @@ function Home(props) {
             {ShowRed !== false ? (
                 <ModalUtamaRed
                     handleCloseRed={handleCloseRed}
+
                     handleShowModalRed={handleShowModalRed}
-                    handleShowModalOrange={handleShowModalOrange}
-                    handleShowModalBrown={handleShowModalBrown}
-                    handleShowModalYellow={handleShowModalYellow}
-                    handleShowModalGreen={handleShowModalGreen}
-                    handleShowModalBlue={handleShowModalBlue}
+                    // handleShowModalOrange={handleShowModalOrange}
+                    // handleShowModalBrown={handleShowModalBrown}
+                    // handleShowModalYellow={handleShowModalYellow}
+                    // handleShowModalGreen={handleShowModalGreen}
+                    // handleShowModalBlue={handleShowModalBlue}
+
+                    handleShowModalMerah={handleShowModalMerah}
+                // handleShowModalJingga={handleShowModalJingga}
+                // handleShowModalCoklat={handleShowModalCoklat}
+                // handleShowModalKuning={handleShowModalKuning}
+                // handleShowModalHijau={handleShowModalHijau}
+                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -228,12 +238,19 @@ function Home(props) {
             {ShowGreen !== false ? (
                 <ModalUtamaGreen
                     handleCloseGreen={handleCloseGreen}
-                    handleShowModalRed={handleShowModalRed}
-                    handleShowModalOrange={handleShowModalOrange}
-                    handleShowModalBrown={handleShowModalBrown}
-                    handleShowModalYellow={handleShowModalYellow}
+                    // handleShowModalRed={handleShowModalRed}
+                    // handleShowModalOrange={handleShowModalOrange}
+                    // handleShowModalBrown={handleShowModalBrown}
+                    // handleShowModalYellow={handleShowModalYellow}
                     handleShowModalGreen={handleShowModalGreen}
-                    handleShowModalBlue={handleShowModalBlue}
+                    // handleShowModalBlue={handleShowModalBlue}
+
+                    // handleShowModalMerah={handleShowModalMerah}
+                    // handleShowModalJingga={handleShowModalJingga}
+                    // handleShowModalCoklat={handleShowModalCoklat}
+                    // handleShowModalKuning={handleShowModalKuning}
+                    handleShowModalHijau={handleShowModalHijau}
+                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -243,12 +260,19 @@ function Home(props) {
             {ShowBlue !== false ? (
                 <ModalUtamaBlue
                     handleCloseBlue={handleCloseBlue}
-                    handleShowModalRed={handleShowModalRed}
-                    handleShowModalOrange={handleShowModalOrange}
-                    handleShowModalBrown={handleShowModalBrown}
-                    handleShowModalYellow={handleShowModalYellow}
-                    handleShowModalGreen={handleShowModalGreen}
+                    // handleShowModalRed={handleShowModalRed}
+                    // handleShowModalOrange={handleShowModalOrange}
+                    // handleShowModalBrown={handleShowModalBrown}
+                    // handleShowModalYellow={handleShowModalYellow}
+                    // handleShowModalGreen={handleShowModalGreen}
                     handleShowModalBlue={handleShowModalBlue}
+
+                    // handleShowModalMerah={handleShowModalMerah}
+                    // handleShowModalJingga={handleShowModalJingga}
+                    // handleShowModalCoklat={handleShowModalCoklat}
+                    // handleShowModalKuning={handleShowModalKuning}
+                    // handleShowModalHijau={handleShowModalHijau}
+                    handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -258,12 +282,19 @@ function Home(props) {
             {ShowOrange !== false ? (
                 <ModalUtamaOrange
                     handleCloseOrange={handleCloseOrange}
-                    handleShowModalRed={handleShowModalRed}
+                    // handleShowModalRed={handleShowModalRed}
                     handleShowModalOrange={handleShowModalOrange}
-                    handleShowModalBrown={handleShowModalBrown}
-                    handleShowModalYellow={handleShowModalYellow}
-                    handleShowModalGreen={handleShowModalGreen}
-                    handleShowModalBlue={handleShowModalBlue}
+                    // handleShowModalBrown={handleShowModalBrown}
+                    // handleShowModalYellow={handleShowModalYellow}
+                    // handleShowModalGreen={handleShowModalGreen}
+                    // handleShowModalBlue={handleShowModalBlue}
+
+                    // handleShowModalMerah={handleShowModalMerah}
+                    handleShowModalJingga={handleShowModalJingga}
+                // handleShowModalCoklat={handleShowModalCoklat}
+                // handleShowModalKuning={handleShowModalKuning}
+                // handleShowModalHijau={handleShowModalHijau}
+                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -273,12 +304,20 @@ function Home(props) {
             {ShowBrown !== false ? (
                 <ModalUtamaBrown
                     handleCloseBrown={handleCloseBrown}
-                    handleShowModalRed={handleShowModalRed}
-                    handleShowModalOrange={handleShowModalOrange}
+
+                    // handleShowModalRed={handleShowModalRed}
+                    // handleShowModalOrange={handleShowModalOrange}
                     handleShowModalBrown={handleShowModalBrown}
-                    handleShowModalYellow={handleShowModalYellow}
-                    handleShowModalGreen={handleShowModalGreen}
-                    handleShowModalBlue={handleShowModalBlue}
+                    // handleShowModalYellow={handleShowModalYellow}
+                    // handleShowModalGreen={handleShowModalGreen}
+                    // handleShowModalBlue={handleShowModalBlue}
+
+                    // handleShowModalMerah={handleShowModalMerah}
+                    // handleShowModalJingga={handleShowModalJingga}
+                    handleShowModalCoklat={handleShowModalCoklat}
+                // handleShowModalKuning={handleShowModalKuning}
+                // handleShowModalHijau={handleShowModalHijau}
+                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>

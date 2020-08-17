@@ -24,40 +24,40 @@ function ModalUtamaYellow(props) {
                 </button>
                 <div className="row mt-15">
                     <div className="col grid-center cropped">
-                        <img className="square" src={modal} />
+                        <img className="square cursor-pointer" src={modal} onClick={props.handleShowModalYellow} />
                         <h2
                             style={{ fontFamily: "anton" }}
-                            className="text-white mt-4 m-0"
+                            className="text-white mt-4 m-0 cursor-pointer"
+                            onClick={props.handleShowModalYellow}
                         >
                             VIRTUAL PHOTOSHOOT
                                 </h2>
                         <p className="text-white">
                             lorem ipsum this is a gallery of photo.
                                 </p>
-                        <div className="flex-center">
-                            {/* ketiga yang mau di klik kasih onClick handleShowModalRed*/}
+                        {/* <div className="flex-center">
                             <div className="kotak-kecil bg-red m-0_5 cursor-pointer" onClick={props.handleShowModalRed} />
                             <div className="kotak-kecil bg-orange m-0_5 cursor-pointer" onClick={props.handleShowModalOrange} />
                             <div className="kotak-kecil bg-brown m-0_5 cursor-pointer" onClick={props.handleShowModalBrown} />
                             <div className="kotak-kecil bg-yellow m-0_5 cursor-pointer" onClick={props.handleShowModalYellow} />
                             <div className="kotak-kecil bg-color m-0_5 cursor-pointer" onClick={props.handleShowModalGreen} />
                             <div className="kotak-kecil bg-blue m-0_5 cursor-pointer" onClick={props.handleShowModalBlue} />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col grid-center cropped">
-                        <img className="square" src={modal} />
-                        <h2 className="mt-4 m-0 text-white" style={{ fontFamily: "anton", }} >LIVE PAINTING</h2>
+                        <img className="square cursor-pointer" src={modal} onClick={props.handleShowModalKuning} />
+                        <h2 className="mt-4 m-0 text-white cursor-pointer" onClick={props.handleShowModalKuning} style={{ fontFamily: "anton" }} >LIVE PAINTING</h2>
                         <p className="text-white">
                             lorem ipsum this is a gallery of painting.
                                 </p>
-                        <div className="flex-center">
+                        {/* <div className="flex-center">
                             <div className="kotak-kecil bg-red m-0_5 cursor-pointer" onClick={props.handleShowModalMerah} />
                             <div className="kotak-kecil bg-orange m-0_5 cursor-pointer" onClick={props.handleShowModalJingga} />
                             <div className="kotak-kecil bg-brown m-0_5 cursor-pointer" onClick={props.handleShowModalCoklat} />
                             <div className="kotak-kecil bg-yellow m-0_5 cursor-pointer" onClick={props.handleShowModalKuning} />
                             <div className="kotak-kecil bg-color m-0_5 cursor-pointer" onClick={props.handleShowModalHijau} />
                             <div className="kotak-kecil bg-blue m-0_5 cursor-pointer" onClick={props.handleShowModalBiru} />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

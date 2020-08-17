@@ -381,14 +381,12 @@ img:hover{
 }
 
 .content-item {
-  min-width: 163px;
-  min-height: 150px;
-
-  max-height: 150px;
+  min-width: 60px;
+  min-height: 100px;
+  max-height: 100px;
   display: block;
   color: white;
   margin: 1px;
-
   overflow: hidden;
 }
 @keyframes scroll {
@@ -408,7 +406,7 @@ img:hover{
 #content-1:hover {
   background: yellow;
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -421,7 +419,7 @@ img:hover{
 #content-1:hover ~ #content-1 {
   background-color: yellow;
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -442,7 +440,7 @@ img:hover{
 #content-2:hover {
   background: red;
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -455,7 +453,7 @@ img:hover{
 #content-2:hover ~ #content-2 {
   background-color: red;
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -477,7 +475,7 @@ img:hover{
   background: green;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -491,7 +489,7 @@ img:hover{
   background-color: green;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -513,7 +511,7 @@ img:hover{
   background: blue;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -527,7 +525,7 @@ img:hover{
   background-color: blue;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -549,7 +547,7 @@ img:hover{
   background: orange;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -563,7 +561,7 @@ img:hover{
   background-color: orange;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -585,7 +583,7 @@ img:hover{
   background: brown;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -599,7 +597,7 @@ img:hover{
   background-color: brown;
 
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 135px;
   min-height: 175;
 
   -webkit-transition: all 500ms ease;
@@ -686,7 +684,8 @@ body {
 .content-container img {
   object-fit: cover;
   max-width: 100%;
-  height: 23vh;
+  width: 100%;
+  height: 15vh;
   opacity: 0.4;
 }
 .text-left{
