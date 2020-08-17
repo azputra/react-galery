@@ -29,6 +29,9 @@ import ModalJingga from "../components/ModalJingga"
 import ModalKuning from "../components/ModalKuning"
 import ModalHijau from "../components/ModalHijau"
 
+// pemenang
+import ModalPemenang from "../components/ModalPemenang"
+
 
 function Home(props) {
     const dispatch = useDispatch();
@@ -58,6 +61,9 @@ function Home(props) {
     const [modalBiru, setModalBiru] = useState(false);
     const [modalHijau, setModalHijau] = useState(false);
     const [modalKuning, setModalKuning] = useState(false);
+
+    // set pemenang modal
+    const [modalPemenang, setModalPemenang] = useState(false);
 
     //setPhoto
 
@@ -131,6 +137,11 @@ function Home(props) {
     const handleCloseModalBiru = () => setModalBiru(false);
     const handleShowModalBiru = () => setModalBiru(true);
 
+    // pemenang modal
+    const handleClosePemenang = () => setModalPemenang(false);
+    const handleShowPemenang = () => setModalPemenang(true);
+
+
     useEffect(() => { }, []);
 
 
@@ -144,68 +155,15 @@ function Home(props) {
                 handleShowBlue={handleShowBlue}
                 handleShowOrange={handleShowOrange}
                 handleShowBrown={handleShowBrown}
+                handleShowPemenang={handleShowPemenang}
             />
-
-            {/* <div class="logo-container">
-                <div class="logo-bi">
-                    <img id="logo-bi" src="./assets/img/LOGO UTUH BIRU.png" alt="" />
-                </div>
-                <div class="logo-ipebi">
-                    <img id="logo-ipebi" src="./assets/img/LOGO IPEBI Print A4-01.png" alt="" />
-                </div>
-            </div> */}
-
-            {/* <section className="pen">
-                <div className="panel top">
-                    <h1
-                        style={{
-                            paddingTop: "40vh",
-                            position: "relative",
-                            textAlign: "center",
-                            fontFamily: "anton",
-                            fontSize: "10vh",
-                            fontWeight: "bold",
-                            marginBottom: "0"
-                        }}
-                    >
-                        DIGIFESTA BI
-                    </h1>
-                    <h4 style={{
-                        position: "relative",
-                        textAlign: "center",
-                        fontSize: "5vh",
-                        fontWeight: "bold",
-                    }}>
-                        {" "}
-                        Bank Indonesia
-                    </h4>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                        <div onClick={handleShow} id="btn">
-                            <span className="noselect">Klik</span>
-                            <div id="circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
 
             {/* YELLOW */}
             {ShowYellow !== false ? (
                 <ModalUtamaYellow
                     handleCloseYellow={handleCloseYellow}
-
-                    // handleShowModalRed={handleShowModalRed}
-                    // handleShowModalOrange={handleShowModalOrange}
-                    // handleShowModalBrown={handleShowModalBrown}
                     handleShowModalYellow={handleShowModalYellow}
-                    // handleShowModalGreen={handleShowModalGreen}
-                    // handleShowModalBlue={handleShowModalBlue}
-
-                    // handleShowModalMerah={handleShowModalMerah}
-                    // handleShowModalJingga={handleShowModalJingga}
-                    // handleShowModalCoklat={handleShowModalCoklat}
                     handleShowModalKuning={handleShowModalKuning}
-                // handleShowModalHijau={handleShowModalHijau}
-                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -215,20 +173,8 @@ function Home(props) {
             {ShowRed !== false ? (
                 <ModalUtamaRed
                     handleCloseRed={handleCloseRed}
-
                     handleShowModalRed={handleShowModalRed}
-                    // handleShowModalOrange={handleShowModalOrange}
-                    // handleShowModalBrown={handleShowModalBrown}
-                    // handleShowModalYellow={handleShowModalYellow}
-                    // handleShowModalGreen={handleShowModalGreen}
-                    // handleShowModalBlue={handleShowModalBlue}
-
                     handleShowModalMerah={handleShowModalMerah}
-                // handleShowModalJingga={handleShowModalJingga}
-                // handleShowModalCoklat={handleShowModalCoklat}
-                // handleShowModalKuning={handleShowModalKuning}
-                // handleShowModalHijau={handleShowModalHijau}
-                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -238,19 +184,8 @@ function Home(props) {
             {ShowGreen !== false ? (
                 <ModalUtamaGreen
                     handleCloseGreen={handleCloseGreen}
-                    // handleShowModalRed={handleShowModalRed}
-                    // handleShowModalOrange={handleShowModalOrange}
-                    // handleShowModalBrown={handleShowModalBrown}
-                    // handleShowModalYellow={handleShowModalYellow}
                     handleShowModalGreen={handleShowModalGreen}
-                    // handleShowModalBlue={handleShowModalBlue}
-
-                    // handleShowModalMerah={handleShowModalMerah}
-                    // handleShowModalJingga={handleShowModalJingga}
-                    // handleShowModalCoklat={handleShowModalCoklat}
-                    // handleShowModalKuning={handleShowModalKuning}
                     handleShowModalHijau={handleShowModalHijau}
-                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -260,18 +195,7 @@ function Home(props) {
             {ShowBlue !== false ? (
                 <ModalUtamaBlue
                     handleCloseBlue={handleCloseBlue}
-                    // handleShowModalRed={handleShowModalRed}
-                    // handleShowModalOrange={handleShowModalOrange}
-                    // handleShowModalBrown={handleShowModalBrown}
-                    // handleShowModalYellow={handleShowModalYellow}
-                    // handleShowModalGreen={handleShowModalGreen}
                     handleShowModalBlue={handleShowModalBlue}
-
-                    // handleShowModalMerah={handleShowModalMerah}
-                    // handleShowModalJingga={handleShowModalJingga}
-                    // handleShowModalCoklat={handleShowModalCoklat}
-                    // handleShowModalKuning={handleShowModalKuning}
-                    // handleShowModalHijau={handleShowModalHijau}
                     handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
@@ -282,19 +206,8 @@ function Home(props) {
             {ShowOrange !== false ? (
                 <ModalUtamaOrange
                     handleCloseOrange={handleCloseOrange}
-                    // handleShowModalRed={handleShowModalRed}
                     handleShowModalOrange={handleShowModalOrange}
-                    // handleShowModalBrown={handleShowModalBrown}
-                    // handleShowModalYellow={handleShowModalYellow}
-                    // handleShowModalGreen={handleShowModalGreen}
-                    // handleShowModalBlue={handleShowModalBlue}
-
-                    // handleShowModalMerah={handleShowModalMerah}
                     handleShowModalJingga={handleShowModalJingga}
-                // handleShowModalCoklat={handleShowModalCoklat}
-                // handleShowModalKuning={handleShowModalKuning}
-                // handleShowModalHijau={handleShowModalHijau}
-                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -304,20 +217,8 @@ function Home(props) {
             {ShowBrown !== false ? (
                 <ModalUtamaBrown
                     handleCloseBrown={handleCloseBrown}
-
-                    // handleShowModalRed={handleShowModalRed}
-                    // handleShowModalOrange={handleShowModalOrange}
                     handleShowModalBrown={handleShowModalBrown}
-                    // handleShowModalYellow={handleShowModalYellow}
-                    // handleShowModalGreen={handleShowModalGreen}
-                    // handleShowModalBlue={handleShowModalBlue}
-
-                    // handleShowModalMerah={handleShowModalMerah}
-                    // handleShowModalJingga={handleShowModalJingga}
                     handleShowModalCoklat={handleShowModalCoklat}
-                // handleShowModalKuning={handleShowModalKuning}
-                // handleShowModalHijau={handleShowModalHijau}
-                // handleShowModalBiru={handleShowModalBiru}
                 />
             ) : (
                     <div></div>
@@ -341,7 +242,7 @@ function Home(props) {
                                 <img className="square" src={modal} />
                                 <h2 className="App-link mt-4 m-0">
                                     Virtual Photoshoot
-                    </h2>
+                                </h2>
                                 <p>lorem ipsum this is a gallery of photo.</p>
                                 <div className="flex-center">
                                     <div className="brk-btn">Kiri</div>
@@ -468,6 +369,15 @@ function Home(props) {
             {
                 modalBiru !== false ? (
                     <ModalBiru handleCloseModalBiru={handleCloseModalBiru} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* List Pemenang */}
+            {
+                modalPemenang !== false ? (
+                    <ModalPemenang handleClosePemenang={handleClosePemenang} />
                 ) : (
                         <div></div>
                     )

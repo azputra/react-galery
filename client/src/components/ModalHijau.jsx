@@ -27,18 +27,28 @@ function ModalHijau(props) {
                     <div class="content">
                         <div class="wrapper-painting">
                             <div class="right-content">
+                                <h1 className="text-white title-right">Lomba Live Painting Digifestabi 2020</h1>
+                                <p className="text-white desc-right">Untuk pertama kalinya, BI menyelenggarakan lomba melukis secara langsung yang dapat diikuti perwakilan pegawai dari seluruh nusantara. Lomba Live Painting Digifestabi 2020 diselenggarakan secara secara virtual di hadapan juri melalui video conference. Para seniman lukis BI hanya diberi waktu 120 menit untuk mulai menyusun hingga mengunggah foto karyanya. Waktu yang singkat terbukti tak menjadi halangan untuk terciptanya sebuah karya yang menggugah, yang mengambil sudut pandang digitalisasi Bank Indonesia, kecintaan pada negeri, atau optimisme di tengah pandemi.</p>
                             </div>
                             <div class="left-content-1" >
                                 <div class="left-content">
-                                    <div className="row m-0">
-                                        {/* <p className="text-left">si malih anak pasar jangkrik</p> */}
-                                        {/* <div class="content-item" id="item1"></div> */}
-                                        <div className="col">
-                                            <div style={{ backgroundColor: "#f6a9dc", height: "55vh", width: "70vh", borderRadius: "4vh" }}></div>
+                                    <p className="text-right">Live Painting</p>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Halida - BI Digital Maju</p>
+                                            <img className="kotak-img" src={require("../assets/painting/h1.jpg")} alt="" />
                                         </div>
-
-                                        <div className="col">
-                                            <div style={{ backgroundColor: "#f6a9dc", height: "55vh", width: "70vh", borderRadius: "4vh" }}></div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Mei Wulanda</p>
+                                            <img className="kotak-img" src={require("../assets/painting/h2.jpg")} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Yudhya Pratidina Rosady - Kenormalan Baru, Kebiasaan baru, Kesempatan Baru</p>
+                                            <img className="kotak-img" src={require("../assets/painting/h3.jpg")} alt="" />
                                         </div>
                                     </div>
                                 </div>

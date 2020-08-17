@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import modal from "../assets/modal1.jpeg";
+import painting from "../assets/Biru_gde agus_14346_kita semua bisa.jpg";
 
 function ModalUtamaBrown(props) {
     const style = {
@@ -26,22 +27,15 @@ function ModalUtamaBrown(props) {
                     <div className="col grid-center cropped">
                         <img className="square cursor-pointer" src={modal} onClick={props.handleShowModalBrown} />
                         <h2
-                            style={{ fontFamily: "anton" }}
-                            className="text-white mt-4 m-0 cursor-pointer"
+                            className="text-white mt-2_5 cursor-pointer text-title"
                             onClick={props.handleShowModalBrown}
                         >
                             VIRTUAL PHOTOSHOOT
-                                </h2>
-                        <p className="text-white">
-                            lorem ipsum this is a gallery of photo.
-                        </p>
+                        </h2>
                     </div>
                     <div className="col grid-center cropped">
-                        <img className="square cursor-pointer" src={modal} onClick={props.handleShowModalCoklat} />
-                        <h2 className="mt-4 m-0 text-white cursor-pointer" style={{ fontFamily: "anton" }} onClick={props.handleShowModalCoklat}>LIVE PAINTING</h2>
-                        <p className="text-white">
-                            lorem ipsum this is a gallery of painting.
-                        </p>
+                        <img className="square cursor-pointer" src={painting} onClick={props.handleShowModalJingga} />
+                        <h2 className="mt-2_5 text-white cursor-pointer text-title" onClick={props.handleShowModalJingga} >LIVE PAINTING</h2>
                     </div>
                 </div>
             </div>

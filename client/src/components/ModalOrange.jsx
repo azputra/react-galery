@@ -28,37 +28,66 @@ function ModalOrange(props) {
                         <div class="wrapper">
                             <div class="left-content-1" >
                                 <div class="left-content">
-                                    <div className="row m-0">
-                                        <p className="text-left">si malih anak pasar jangkrik</p>
+                                    <p className="text-left">Virtual Photoshoot</p>
+                                    <div className="row mt-6">
                                         <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
-                                            <div style={{ backgroundColor: "#f6a9dc", width: "100%", height: "50vh", borderRadius: "4vh" }}></div>
+                                            <p className="judul">Haidar Rizky Suaiba</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.1.jpg")} alt="" />
                                         </div>
-                                        {/* <h1 className="title">BUNGON JEMPA</h1> */}
-                                        {/* <p className="nama-pengarang">Di buat oleh pak sutyadi</p> */}
-                                        {/* <p className="nama-pengarang">Pada tahun 2019</p> */}
                                     </div>
-                                    <div className="row" style={{ margin: "5vh 0 0 0" }}>
-                                        <div className="col" style={{ maxWidth: "48%", padding: "0", height: "100%" }}>
-                                            <div style={{ backgroundColor: "#f6a9dc", width: "100%", height: "55vh", borderRadius: "4vh" }}></div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Haidar Rizky Suaiba</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.2.jpg")} alt="" />
                                         </div>
-                                        {/* <h1 className="title">BUNGON JEMPA</h1> */}
-                                        {/* <p className="nama-pengarang">Di buat oleh pak sutyadi</p> */}
-                                        {/* <p className="nama-pengarang">Pada tahun 2019</p> */}
                                     </div>
-                                    <div className="row" style={{ margin: "5vh 0 0 0", display: "flex", justifyContent: "space-between" }}>
-                                        <div className="col" style={{ maxWidth: "48%", padding: "0", height: "100%" }}>
-                                            <div style={{ backgroundColor: "#fedfc6", width: "100%", height: "40vh", borderRadius: "4vh" }}></div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Haidar Rizky Suaiba</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.3.jpg")} alt="" />
                                         </div>
-                                        <div className="col" style={{ maxWidth: "48%", padding: "0", height: "100%" }}>
-                                            <div style={{ backgroundColor: "#fec55c", width: "100%", height: "40vh", borderRadius: "4vh" }}></div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Agapito Ganesha J.M.N</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.4.jpg")} alt="" />
                                         </div>
-                                        {/* <h1 className="title">BUNGON JEMPA</h1> */}
-                                        {/* <p className="nama-pengarang">Di buat oleh pak sutyadi</p> */}
-                                        {/* <p className="nama-pengarang">Pada tahun 2019</p> */}
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Agapito Ganesha J.M.N</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.5.jpg")} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Agapito Ganesha J.M.N</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.6.jpg")} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Anissa Noor Andriani</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.7.jpg")} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Anissa Noor Andriani</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.8.jpg")} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="row mt-6">
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <p className="judul">Anissa Noor Andriani</p>
+                                            <img className="kotak-img" src={require("../assets/img/2.9.jpg")} alt="" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="right-content">
+                                <h1 className="text-white title-right">Lomba Virtual Photoshoot Digifestabi 2020 </h1>
+                                <p className="text-white desc-right">Virtual Photoshoot merupakan suatu inovasi di bidang fotografi dengan cara melakukan pengambilan hasil karya foto melalui video conference. Lomba Virtual Photoshoot Digifestabi 2020 memberi pengalaman baru bagi talenta-talenta fotografi Bank Indonesia. Alih-alih sesi foto secara live, para fotografer membidikkan kameranya ke laptop dan mengarahkan model yang berada di sisi lain layar. Mengambil tema “Generasi Muda Indonesia sebagai Inspirasi Transformasi Digital”, para fotografer BI telah mampu menunjukkan kebolehannya dengan menghasilkan foto-foto berkualitas.</p>
                             </div>
                         </div>
                     </div>
