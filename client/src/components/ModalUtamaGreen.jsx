@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import modal from "../assets/modal1.jpeg";
 
-function ModalRed(props) {
+function ModalUtamaGreen(props) {
     const style = {
         animation:
             "1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s 1 normal forwards running fade-in-up",
@@ -16,7 +16,7 @@ function ModalRed(props) {
         >
             <div className="modal-body">
                 <button
-                    onClick={props.handleClose}
+                    onClick={props.handleCloseGreen}
                     type="button"
                     className="close close-x"
                 >
@@ -83,4 +83,4 @@ function ModalRed(props) {
     )
 }
 
-export default ModalRed
+export default ModalUtamaGreen

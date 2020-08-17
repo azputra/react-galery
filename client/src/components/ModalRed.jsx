@@ -30,7 +30,9 @@ function ModalRed(props) {
                                 <div class="left-content">
                                     <div className="row m-0">
                                         <p className="text-left">si malih anak pasar jangkrik</p>
-                                        <div class="content-item" id="item1"></div>
+                                        <div className="col" style={{ width: "100%", padding: "0", height: "100%" }}>
+                                            <div style={{ backgroundColor: "#f6a9dc", width: "100%", height: "50vh", borderRadius: "4vh" }}></div>
+                                        </div>
                                         {/* <h1 className="title">BUNGON JEMPA</h1> */}
                                         {/* <p className="nama-pengarang">Di buat oleh pak sutyadi</p> */}
                                         {/* <p className="nama-pengarang">Pada tahun 2019</p> */}

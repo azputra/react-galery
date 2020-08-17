@@ -4,31 +4,60 @@ import Navbar from "../components/Navbar";
 import { animations, AnimateOnChange } from "react-animation";
 import { CSSTransition } from "react-transition-group";
 import modal from "../assets/modal1.jpeg";
-import Background from "./Background";
+import Background from "../components/Background"
+// import modal utama
+import ModalUtamaYellow from "../components/ModalUtamaYellow"
+import ModalUtamaRed from "../components/ModalUtamaRed"
+import ModalUtamaGreen from "../components/ModalUtamaGreen"
+import ModalUtamaBlue from "../components/ModalUtamaBlue"
+import ModalUtamaOrange from "../components/ModalUtamaOrange"
+import ModalUtamaBrown from "../components/ModalUtamaBrown"
 
-// 2
+// Virtual Photoshoot
 import ModalRed from "../components/ModalRed"
 import ModalBlue from "../components/ModalBlue"
 import ModalBrown from "../components/ModalBrown"
 import ModalOrange from "../components/ModalOrange"
-import ModalUtama from "../components/ModalUtama"
 import ModalYellow from "../components/ModalYellow"
 import ModalGreen from "../components/ModalGreen"
+
+// Live Painting
+import ModalMerah from "../components/ModalMerah"
+import ModalBiru from "../components/ModalBiru"
+import ModalCoklat from "../components/ModalCoklat"
+import ModalJingga from "../components/ModalJingga"
+import ModalKuning from "../components/ModalKuning"
+import ModalHijau from "../components/ModalHijau"
 
 
 function Home(props) {
     const dispatch = useDispatch();
 
-    const [show, setShow] = useState(false);
+    // modal utama
+    const [ShowYellow, setShowYellow] = useState(false);
+    const [ShowRed, setShowRed] = useState(false);
+    const [ShowGreen, setShowGreen] = useState(false);
+    const [ShowBlue, setShowBlue] = useState(false);
+    const [ShowOrange, setShowOrange] = useState(false);
+    const [ShowBrown, setShowBrown] = useState(false);
+
     const [showModal2, setshowModal2] = useState(false);
 
-    // setPainting
+    // setVirtual Photoshoot
     const [modalRed, setModalRed] = useState(false);
     const [modalOrange, setModalOrange] = useState(false);
     const [modalBrown, setModalBrown] = useState(false);
     const [modalBlue, setModalBlue] = useState(false);
     const [modalGreen, setModalGreen] = useState(false);
     const [modalYellow, setModalYellow] = useState(false);
+
+    // setLivepainting Photoshoot
+    const [modalMerah, setModalMerah] = useState(false);
+    const [modalJingga, setModalJingga] = useState(false);
+    const [modalCoklat, setModalCoklat] = useState(false);
+    const [modalBiru, setModalBiru] = useState(false);
+    const [modalHijau, setModalHijau] = useState(false);
+    const [modalKuning, setModalKuning] = useState(false);
 
     //setPhoto
 
@@ -42,13 +71,29 @@ function Home(props) {
             "1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s 1 normal forwards running slide-out",
     };
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // modal utama
+    const handleCloseYellow = () => setShowYellow(false);
+    const handleShowYellow = () => setShowYellow(true);
+
+    const handleCloseRed = () => setShowRed(false);
+    const handleShowRed = () => setShowRed(true);
+
+    const handleCloseGreen = () => setShowGreen(false);
+    const handleShowGreen = () => setShowGreen(true);
+
+    const handleCloseBlue = () => setShowBlue(false);
+    const handleShowBlue = () => setShowBlue(true);
+
+    const handleCloseOrange = () => setShowOrange(false);
+    const handleShowOrange = () => setShowOrange(true);
+
+    const handleCloseBrown = () => setShowBrown(false);
+    const handleShowBrown = () => setShowBrown(true);
 
     const handleCloseModal2 = () => setshowModal2(false);
     const handleShowModal2 = () => setshowModal2(true);
 
-    // tambahin variabel buat setstate
+    // set state Virtual Photoshot
     const handleCloseModalRed = () => setModalRed(false);
     const handleShowModalRed = () => setModalRed(true);
 
@@ -67,13 +112,50 @@ function Home(props) {
     const handleCloseModalBlue = () => setModalBlue(false);
     const handleShowModalBlue = () => setModalBlue(true);
 
+    // set state Live Painting
+    const handleCloseModalMerah = () => setModalMerah(false);
+    const handleShowModalMerah = () => setModalMerah(true);
+
+    const handleCloseModalJingga = () => setModalJingga(false);
+    const handleShowModalJingga = () => setModalJingga(true);
+
+    const handleCloseModalCoklat = () => setModalCoklat(false);
+    const handleShowModalCoklat = () => setModalCoklat(true);
+
+    const handleCloseModalKuning = () => setModalKuning(false);
+    const handleShowModalKuning = () => setModalKuning(true);
+
+    const handleCloseModalHijau = () => setModalHijau(false);
+    const handleShowModalHijau = () => setModalHijau(true);
+
+    const handleCloseModalBiru = () => setModalBiru(false);
+    const handleShowModalBiru = () => setModalBiru(true);
+
     useEffect(() => { }, []);
 
-    //   Background
 
     return (
         <div>
-            <section className="pen">
+            {/* Background */}
+            <Background
+                handleShowYellow={handleShowYellow}
+                handleShowRed={handleShowRed}
+                handleShowGreen={handleShowGreen}
+                handleShowBlue={handleShowBlue}
+                handleShowOrange={handleShowOrange}
+                handleShowBrown={handleShowBrown}
+            />
+
+            {/* <div class="logo-container">
+                <div class="logo-bi">
+                    <img id="logo-bi" src="./assets/img/LOGO UTUH BIRU.png" alt="" />
+                </div>
+                <div class="logo-ipebi">
+                    <img id="logo-ipebi" src="./assets/img/LOGO IPEBI Print A4-01.png" alt="" />
+                </div>
+            </div> */}
+
+            {/* <section className="pen">
                 <div className="panel top">
                     <h1
                         style={{
@@ -104,12 +186,33 @@ function Home(props) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            {/* Option */}
-            {show !== false ? (
-                <ModalUtama
-                    handleClose={handleClose}
+            {/* YELLOW */}
+            {ShowYellow !== false ? (
+                <ModalUtamaYellow
+                    handleCloseYellow={handleCloseYellow}
+                    handleShowModalRed={handleShowModalRed}
+                    handleShowModalOrange={handleShowModalOrange}
+                    handleShowModalBrown={handleShowModalBrown}
+                    handleShowModalYellow={handleShowModalYellow}
+                    handleShowModalGreen={handleShowModalGreen}
+                    handleShowModalBlue={handleShowModalBlue}
+                    handleShowModalMerah={handleShowModalMerah}
+                    handleShowModalJingga={handleShowModalJingga}
+                    handleShowModalCoklat={handleShowModalCoklat}
+                    handleShowModalKuning={handleShowModalKuning}
+                    handleShowModalHijau={handleShowModalHijau}
+                    handleShowModalBiru={handleShowModalBiru}
+                />
+            ) : (
+                    <div></div>
+                )}
+
+            {/* RED */}
+            {ShowRed !== false ? (
+                <ModalUtamaRed
+                    handleCloseRed={handleCloseRed}
                     handleShowModalRed={handleShowModalRed}
                     handleShowModalOrange={handleShowModalOrange}
                     handleShowModalBrown={handleShowModalBrown}
@@ -121,7 +224,65 @@ function Home(props) {
                     <div></div>
                 )}
 
-            {/* stop copas */}
+            {/* GREEN */}
+            {ShowGreen !== false ? (
+                <ModalUtamaGreen
+                    handleCloseGreen={handleCloseGreen}
+                    handleShowModalRed={handleShowModalRed}
+                    handleShowModalOrange={handleShowModalOrange}
+                    handleShowModalBrown={handleShowModalBrown}
+                    handleShowModalYellow={handleShowModalYellow}
+                    handleShowModalGreen={handleShowModalGreen}
+                    handleShowModalBlue={handleShowModalBlue}
+                />
+            ) : (
+                    <div></div>
+                )}
+
+            {/* BLUE */}
+            {ShowBlue !== false ? (
+                <ModalUtamaBlue
+                    handleCloseBlue={handleCloseBlue}
+                    handleShowModalRed={handleShowModalRed}
+                    handleShowModalOrange={handleShowModalOrange}
+                    handleShowModalBrown={handleShowModalBrown}
+                    handleShowModalYellow={handleShowModalYellow}
+                    handleShowModalGreen={handleShowModalGreen}
+                    handleShowModalBlue={handleShowModalBlue}
+                />
+            ) : (
+                    <div></div>
+                )}
+
+            {/* ORANGE */}
+            {ShowOrange !== false ? (
+                <ModalUtamaOrange
+                    handleCloseOrange={handleCloseOrange}
+                    handleShowModalRed={handleShowModalRed}
+                    handleShowModalOrange={handleShowModalOrange}
+                    handleShowModalBrown={handleShowModalBrown}
+                    handleShowModalYellow={handleShowModalYellow}
+                    handleShowModalGreen={handleShowModalGreen}
+                    handleShowModalBlue={handleShowModalBlue}
+                />
+            ) : (
+                    <div></div>
+                )}
+
+            {/* BROWN */}
+            {ShowBrown !== false ? (
+                <ModalUtamaBrown
+                    handleCloseBrown={handleCloseBrown}
+                    handleShowModalRed={handleShowModalRed}
+                    handleShowModalOrange={handleShowModalOrange}
+                    handleShowModalBrown={handleShowModalBrown}
+                    handleShowModalYellow={handleShowModalYellow}
+                    handleShowModalGreen={handleShowModalGreen}
+                    handleShowModalBlue={handleShowModalBlue}
+                />
+            ) : (
+                    <div></div>
+                )}
 
             {showModal2 !== false ? (
                 <div
@@ -139,7 +300,7 @@ function Home(props) {
                         <div className="row">
                             <div className="col grid-center cropped">
                                 <img className="square" src={modal} />
-                                <h2 className="App-link mt-4 m-0 cursor-pointer">
+                                <h2 className="App-link mt-4 m-0">
                                     Virtual Photoshoot
                     </h2>
                                 <p>lorem ipsum this is a gallery of photo.</p>
@@ -165,16 +326,16 @@ function Home(props) {
             {/* abis ngopi show ada 3, ganti modalRed(nama state yg di bikin) */}
             {/* handleClose ganti sama handleCloseModalRed */}
 
-            {/* PaintingRed */}
-            {/* 1 */}
-            {modalRed !== false ? (
-                <ModalRed handleCloseModalRed={handleCloseModalRed} />
-            ) : (
-                    <div></div>
-                )
+            {/* Virtual PhotoshootRed */}
+            {
+                modalRed !== false ? (
+                    <ModalRed handleCloseModalRed={handleCloseModalRed} />
+                ) : (
+                        <div></div>
+                    )
             }
 
-            {/* Painting Orange */}
+            {/* Virtual Photoshoot Orange */}
             {
                 modalOrange !== false ? (
                     <ModalOrange handleCloseModalOrange={handleCloseModalOrange} />
@@ -183,7 +344,7 @@ function Home(props) {
                     )
             }
 
-            {/* Painting Brown */}
+            {/* Virtual Photoshoot Brown */}
             {
                 modalBrown !== false ? (
                     <ModalBrown handleCloseModalBrown={handleCloseModalBrown} />
@@ -192,7 +353,7 @@ function Home(props) {
                     )
             }
 
-            {/* Painting Yellow */}
+            {/* Virtual Photoshoot Yellow */}
             {
                 modalYellow !== false ? (
                     <ModalYellow handleCloseModalYellow={handleCloseModalYellow} />
@@ -201,7 +362,7 @@ function Home(props) {
                     )
             }
 
-            {/* Painting Green */}
+            {/* Virtual Photoshoot Green */}
             {
                 modalGreen !== false ? (
                     <ModalGreen handleCloseModalGreen={handleCloseModalGreen} />
@@ -210,10 +371,64 @@ function Home(props) {
                     )
             }
 
-            {/* Painting Blue */}
+            {/* Virtual Photoshoot Blue */}
             {
                 modalBlue !== false ? (
                     <ModalBlue handleCloseModalBlue={handleCloseModalBlue} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* Live Painting Merah */}
+            {
+                modalMerah !== false ? (
+                    <ModalMerah handleCloseModalMerah={handleCloseModalMerah} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* Live Painting  Jingga */}
+            {
+                modalJingga !== false ? (
+                    <ModalJingga handleCloseModalJingga={handleCloseModalJingga} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* Live Painting  Coklat */}
+            {
+                modalCoklat !== false ? (
+                    <ModalCoklat handleCloseModalCoklat={handleCloseModalCoklat} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* Live Painting  Kuning */}
+            {
+                modalKuning !== false ? (
+                    <ModalKuning handleCloseModalKuning={handleCloseModalKuning} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* Live Painting  Hijau */}
+            {
+                modalHijau !== false ? (
+                    <ModalHijau handleCloseModalHijau={handleCloseModalHijau} />
+                ) : (
+                        <div></div>
+                    )
+            }
+
+            {/* Live Painting  Biru */}
+            {
+                modalBiru !== false ? (
+                    <ModalBiru handleCloseModalBiru={handleCloseModalBiru} />
                 ) : (
                         <div></div>
                     )
