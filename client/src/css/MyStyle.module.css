@@ -1,3 +1,7 @@
 .homepage{
     text-align: center;
+    background-color: blueviolet;
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    height: 100vh;
 }

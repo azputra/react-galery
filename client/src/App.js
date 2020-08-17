@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import {Provider} from "react-redux"
+import { Provider } from "react-redux"
 import store from './redux/stores'
 import HomePage from './views/HomePage';
+import Background from './views/Background';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import {
   BrowserRouter as Router,
@@ -14,9 +16,10 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-      <Switch>
-      <Route exact path="/" component={HomePage} />
-      </Switch>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/background" component={Background} />
+        </Switch>
       </Router>
     </Provider>
   );

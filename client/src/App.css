@@ -13,6 +13,26 @@
   }
 }
 
+.p-0{
+  padding: 0 !important;
+}
+
+.m-0{
+  margin: 0 !important;
+}
+
+.mt-4{
+  margin-top: 4vh !important;
+}
+
+.mt-15{
+  margin-top: 15vh;
+}
+
+.cropped img {
+  object-fit: cover;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -25,7 +45,125 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ffffff;
+}
+
+.modal-90w{
+  width: 90% !important;
+  max-width: 100% !important;
+  height: 80% !important;
+  max-height: 100% !important;
+}
+
+.split {
+  height: 80%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  /* top: 0; */
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 100px;
+}
+
+.left {
+  left: 5%;
+  background-color: white;
+}
+
+.right {
+  right: 5%;
+  background-color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+.square {
+    background-color: black;
+    width: 350px !important;
+    height: 225px !important;
+    border-radius: 25px;
+}
+
+.kotak-kecil{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.modal-container{
+  width: 100%;
+  height: 100%;
+  /* background: rgb(0 0 0 / 18%); */
+  position: absolute;
+  top: 0px;
+}
+
+.modal-top-min{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.modal-body{
+  position: absolute;
+  border-radius: 10px;
+  top: 3vh;
+  left: 3vh;
+  width: 97%;
+  height: 94%;
+  background-color: rgb(37, 37, 37);
+  overflow: hidden;
+  padding: 1rem 5rem !important;
+}
+
+.modal2-body{
+  padding: 4vh;
+  position: absolute;
+  border-radius: 10px;
+  top: 8vh;
+  left: 7vh;
+  width: 93%;
+  height: 84%;
+  background-color: white;
+}
+
+.modal-body-red{
+  position: absolute;
+  border-radius: 10px;
+  top: 3vh;
+  left: 3vh;
+  width: 97%;
+  height: 94%;
+  background-color: rgb(37, 37, 37);
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.grid-center{
+  display: grid;
+  text-align: center;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +173,245 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.col{
+  height: 100px;
+  /* border: px dsolid black; */
+}
+
+.col > img {
+  width: 100%; /* width of container */
+  height: 100%; /* height of container */
+  overflow: hidden;
+}
+
+img:hover{
+  border-radius: 25px;
+}
+
+.close-x{
+  color: white !important;
+  position: absolute;
+  right: 3vh;
+}
+
+.close-x-black{
+  color: black !important;
+  position: absolute;
+  right: 3vh;
+}
+
+.text-white{
+  color: white;
+}
+
+.bg-color{
+  background-color: green;
+}
+
+.bg-red{
+  background-color: red;
+}
+
+.m-0_5{
+  margin: 0.5vh;
+}
+
+.container-background{
+  height: 100vh;
+  overflow: hidden;
+  -webkit-animation: scrollBad 5s linear infinite;
+  animation: scrollBad 5s linear infinite;
+  /* background-image: url(./assets/satu.jpeg); */
+}
+
+.pen {
+  background-color: blue;
+  height: 100vh;
+  width: 100%;
+}
+
+.panel {
+  height: 100%;
+}
+
+.top {
+  background-color: #3E69C3;
+  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
+  background-position: center center;
+  background-size: 500px;
+  -webkit-animation: scrollBad 5s linear infinite;
+  animation: scrollBad 5s linear infinite;
+}
+
+@-webkit-keyframes scrollBad {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -320px;
+  }
+}
+@keyframes scrollBad {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -320px;
+  }
+}
+
+/* button free frontend */
+#btn {
+  max-width: 10px;
+  background: rgb(255, 255, 255);
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#btn #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#btn:hover {
+  background: transparent;
+}
+
+#btn:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+/* content file modal */
+.wrapper {
+  display: grid;
+  grid-template-columns: 115vh 73vh;
+  overflow: hidden;
+}
+
+.left-content-1 {
+  /* display: grid;
+  grid-template-rows: 4fr 10.4fr 0fr; */
+  padding: 4vh 10vh 4vh 15vh;
+  height: 94vh;
+  overflow: scroll;
+  width: 100%;
+  background-color: #1f1f1f;
+  background-image: url(https://www.transparenttextures.com/patterns/batthern.png);
+}
+
+.left-content {
+  /* grid-row-start: 2; */
+  /* grid-row-end: 3; */
+  /* max-height: auto; */
+  /* display: flex; */
+  /* overflow-x: auto; */
+  align-items: center;
+}
+
+.right-content {
+  width: 100%;
+  background-image: url(https://i.pinimg.com/originals/3e/b5/5a/3eb55a3e3502a17a49dafde174b1e6cb.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-item {
+  flex-shrink: 0;
+  width: 600px;
+  height: 400px;
+
+  border-radius: 25px;
+  overflow: hidden;
+  margin: auto 30px;
+
+  background-color: red;
+}
+
+/* ::-webkit-scrollbar {
+  height: 5px;
+} */
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: gray;
+}
+
+h3 {
+  /* margin-left: ; */
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  position: fixed;
+  /* max-height: 225px; height to show an exact number of spans  - in this case span is 45px (40 height plus 5 margin as margins collapse) and we are showing 5 spans to start */
+  float: left;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: absolute;
+  top: 0;
+  animation: scroll 30s linear 1s infinite;
+}
+.content-item {
+  min-width: 163px;
+  min-height: 150px;
+
+  max-height: 150px;
+  display: block;
+  color: white;
+  margin: 1px;
+
+  overflow: hidden;
 }
